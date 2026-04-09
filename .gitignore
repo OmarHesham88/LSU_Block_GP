@@ -1,0 +1,10 @@
+work/
+out/
+transcript
+
+# Common simulator byproducts
+*.wlf
+*.qdb
+*.qpg
+*.qtl
+*_lock
