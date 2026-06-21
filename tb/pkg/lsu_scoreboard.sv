@@ -49,7 +49,7 @@ package lsu_scoreboard_pkg;
             return out;
         endfunction
 
-        task automatic scoreboard(input lsu_sequence_item_class item);
+        function automatic void scoreboard(input lsu_sequence_item_class item);
             logic [`XLEN-1:0] exp;
             int size;
             size = lsu_size_bytes(item.op_type);
@@ -76,7 +76,7 @@ package lsu_scoreboard_pkg;
                         $time, item.lane, item.addr, item.observed_data, exp, item.op_type, right_count, wrong_count);
                 end
             end
-        endtask
+        endfunction
     endclass
 
 endpackage

@@ -2,7 +2,7 @@
 
 ## Current status
 - Phase 1 is effectively completed at LSU unit level.
-- Phase 2 now has documentation and a UVM scaffold, while SimX/WSL execution is still pending.
+- Phase 2 now has documentation, a UVM scaffold, and a validated SimX/WSL execution path.
 - Detailed tracking: `docs\phase_status.md`
 
 ## External dependency
@@ -13,10 +13,10 @@
 ## Expected folder layout
 ```text
 <parent>\
-├── LSU_Block_GP\                 <- this repository
-└── vortex-master\
-    └── vortex-master\
-        └── hw\rtl\...
++-- LSU_Block_GP\                 <- this repository
++-- vortex-master\
+    +-- vortex-master\
+        +-- hw\rtl\...
 ```
 
 ## Setup note

@@ -12,7 +12,9 @@ module lsu_uvm_smoke_top;
 
     logic clk;
     logic reset;
+    lsu_uvm_cfg cfg;
 
+    lsu_uvm_ctrl_if ctrl_if();
     VX_execute_if #(lsu_exe_t) execute_if();
     VX_result_if #(lsu_res_t) result_if();
     VX_lsu_mem_if #(
@@ -22,6 +24,8 @@ module lsu_uvm_smoke_top;
     ) lsu_mem_if();
 
     always #5 clk = ~clk;
+    assign ctrl_if.clk = clk;
+    assign ctrl_if.reset = reset;
 
     VX_lsu_slice dut (
         .clk(clk),
@@ -56,10 +60,14 @@ module lsu_uvm_smoke_top;
     end
 
     initial begin
-        uvm_pkg::uvm_config_db#(virtual VX_execute_if #(lsu_exe_t))::set(null, "*", "exec_vif", execute_if);
-        uvm_pkg::uvm_config_db#(virtual VX_result_if #(lsu_res_t))::set(null, "*", "result_vif", result_if);
-        uvm_pkg::run_test("lsu_uvm_smoke_test");
+        cfg = lsu_uvm_cfg::type_id::create("cfg");
+        cfg.ctrl_vif = ctrl_if;
+        cfg.exec_vif = execute_if;
+        cfg.result_vif = result_if;
+        cfg.random_ops = 120;
+        cfg.enable_fence_tests = 1'b1;
+        uvm_pkg::uvm_config_db#(lsu_uvm_cfg)::set(null, "*", "cfg", cfg);
+        uvm_pkg::run_test("lsu_uvm_main_test");
     end
 
 endmodule
-

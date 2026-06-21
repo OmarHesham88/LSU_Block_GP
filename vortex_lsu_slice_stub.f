@@ -52,5 +52,6 @@ tb/pkg/lsu_seq_item.sv
 tb/pkg/lsu_scoreboard.sv
 tb/pkg/lsu_monitor.sv
 models/lsu_mem_model_rand.sv
+tb/assertions/lsu_if_assertions.sv
 tb/tests/vx_lsu_slice_tb_v2.sv
 tb/tests/vx_lsu_slice_tb_misaligned_neg.sv

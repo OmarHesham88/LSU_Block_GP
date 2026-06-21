@@ -46,6 +46,9 @@ tb/VX_index_buffer.sv
 tb/VX_lsu_slice.sv
 ../../vortex-master/vortex-master/hw/rtl/libs/VX_mem_scheduler.sv
 
+tb/pkg/lsu_seq_item.sv
+tb/pkg/lsu_scoreboard.sv
 models/lsu_mem_model_rand.sv
+tb/uvm/lsu_uvm_ctrl_if.sv
 tb/uvm/lsu_uvm_pkg.sv
 tb/tests/lsu_uvm_smoke_top.sv

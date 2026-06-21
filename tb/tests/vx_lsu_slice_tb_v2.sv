@@ -63,6 +63,14 @@ module lsu_slice_tb_v2;
         .mem_if(lsu_mem_if)
     );
 
+    lsu_if_assertions assertions (
+        .clk(clk),
+        .reset(reset),
+        .execute_if(execute_if),
+        .result_if(result_if),
+        .lsu_mem_if(lsu_mem_if)
+    );
+
     always @(posedge clk) begin
         if (reset) begin
             prev_exec_valid <= 0;
