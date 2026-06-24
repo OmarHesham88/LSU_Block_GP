@@ -1,0 +1,920 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Studies/[ECE491s] Graudation Project 2/Codes/LSU/Verification_v2
+T_opt
+!s110 1782090502
+V6AQ_GT5QSHOkQ6>oh8i<@0
+04 15 4 work lsu_slice_tb_v2 fast 0
+=1-d46a6aabb2a9-6a388b05-2a1-6450
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work_regression
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vlsu_if_assertions
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1782090492
+!i10b 1
+!s100 L5Ekh>3N>:AUX0i@J]F8`1
+I`R7OM1Vm2ZQg6`[NF_bW20
+S1
+R0
+w1781995450
+8tb/assertions/lsu_if_assertions.sv
+Ftb/assertions/lsu_if_assertions.sv
+!i122 0
+L0 3 63
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z6 !s108 1782090492.000000
+Z7 !s107 tb/tests/vx_lsu_slice_tb_misaligned_neg.sv|tb/tests/vx_lsu_slice_tb_v2.sv|tb/assertions/lsu_if_assertions.sv|models/lsu_mem_model_rand.sv|tb/pkg/lsu_monitor.sv|tb/pkg/lsu_scoreboard.sv|tb/pkg/lsu_seq_item.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_mem_scheduler.sv|tb/VX_lsu_slice.sv|tb/VX_index_buffer.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_dp_ram.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_allocator.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_arb.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_unpack.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_pack.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_generic_arbiter.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_fifo_queue.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_buffer.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_pipe_buffer.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_elastic_buffer.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_priority_arbiter.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_priority_encoder.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_lzc.sv|../../vortex-master/vortex-master/hw/rtl/libs/VX_find_first.sv|../../vortex-master/vortex-master/hw/rtl/mem/VX_mem_bus_if.sv|../../vortex-master/vortex-master/hw/rtl/mem/VX_lsu_mem_if.sv|../../vortex-master/vortex-master/hw/rtl/interfaces/VX_result_if.sv|../../vortex-master/vortex-master/hw/rtl/interfaces/VX_execute_if.sv|../../vortex-master/vortex-master/hw/rtl/VX_trace_pkg.sv|../../vortex-master/vortex-master/hw/rtl/VX_gpu_pkg.sv|../../vortex-master/vortex-master/hw/rtl/VX_scope.vh|../../vortex-master/vortex-master/hw/rtl/VX_types.vh|../../vortex-master/vortex-master/hw/rtl/VX_define.vh|../../vortex-master/vortex-master/hw/rtl/VX_platform.vh|../../vortex-master/vortex-master/hw/rtl/VX_config.vh|
+Z8 !s90 -work|work_regression|-sv|-f|.\vortex_lsu_slice_stub.f|
+!i113 0
+Z9 o-work work_regression -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s92 -work work_regression -sv +incdir+../../vortex-master/vortex-master/hw/rtl +incdir+../../vortex-master/vortex-master/hw/rtl/interfaces +incdir+../../vortex-master/vortex-master/hw/rtl/core +incdir+../../vortex-master/vortex-master/hw/rtl/libs +incdir+../../vortex-master/vortex-master/hw/rtl/mem +incdir+tb +incdir+tb/pkg +incdir+tb/assertions +incdir+models +incdir+tb/tests -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vlsu_mem_model_rand
+R2
+R2
+Z11 DXx4 work 10 VX_gpu_pkg 0 22 2hEO6VJfKMZ4d2GLO5SLH2
+DXx4 work 26 lsu_mem_model_rand_sv_unit 0 22 HRa7]hB=G^MH41oY0f5Ug0
+R3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 l16UN[Y1cHU^3f_BILJW32
+Ij4DM<0JhB`9iPdQ5QafeS1
+!s105 lsu_mem_model_rand_sv_unit
+S1
+R0
+Z12 w1773255181
+Z13 8models/lsu_mem_model_rand.sv
+Z14 Fmodels/lsu_mem_model_rand.sv
+!i122 0
+L0 7 134
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+Xlsu_mem_model_rand_sv_unit
+R2
+R2
+R11
+R3
+VHRa7]hB=G^MH41oY0f5Ug0
+r1
+!s85 0
+!i10b 1
+!s100 IQXm__E8zXiM?Mn69UK]d2
+IHRa7]hB=G^MH41oY0f5Ug0
+!i103 1
+S1
+R0
+R12
+R13
+R14
+Z15 F../../vortex-master/vortex-master/hw/rtl/VX_config.vh
+Z16 F../../vortex-master/vortex-master/hw/rtl/VX_platform.vh
+Z17 F../../vortex-master/vortex-master/hw/rtl/VX_scope.vh
+Z18 F../../vortex-master/vortex-master/hw/rtl/VX_define.vh
+Z19 F../../vortex-master/vortex-master/hw/rtl/VX_types.vh
+!i122 0
+Z20 L0 5 0
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+Xlsu_monitor_pkg
+R2
+R11
+Z21 DXx4 work 21 lsu_sequence_item_pkg 0 22 :IiSWl@ejInVW1M8BP5B83
+Z22 DXx4 work 18 lsu_scoreboard_pkg 0 22 h^XTD;00K5[X?b=IKDifU1
+R3
+!i10b 1
+!s100 ;^gi8ibC=`^JTHk=8VVP@1
+I3dNVM1;cP[<z6^YZFBedd1
+S1
+R0
+w1773254306
+8tb/pkg/lsu_monitor.sv
+Ftb/pkg/lsu_monitor.sv
+!i122 0
+L0 1 0
+V3dNVM1;cP[<z6^YZFBedd1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+Xlsu_scoreboard_pkg
+R2
+R11
+R21
+R3
+!i10b 1
+!s100 J889zV7h4_<9dIZ6:h@D<1
+Ih^XTD;00K5[X?b=IKDifU1
+S1
+R0
+w1782030335
+8tb/pkg/lsu_scoreboard.sv
+Ftb/pkg/lsu_scoreboard.sv
+!i122 0
+Z23 L0 3 0
+Vh^XTD;00K5[X?b=IKDifU1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+Xlsu_sequence_item_pkg
+R2
+R11
+R3
+!i10b 1
+!s100 Nfh3bZ[TZ5_=0?BGQ2aBE2
+I:IiSWl@ejInVW1M8BP5B83
+S1
+R0
+w1773254457
+8tb/pkg/lsu_seq_item.sv
+Ftb/pkg/lsu_seq_item.sv
+!i122 0
+R23
+V:IiSWl@ejInVW1M8BP5B83
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+vlsu_slice_tb_misaligned_neg
+R2
+R2
+R11
+DXx4 work 38 vx_lsu_slice_tb_misaligned_neg_sv_unit 0 22 XX;S2Q=V9GzZgS;ACZV^F2
+R3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 8Q2M[fGKIBJX`dbhWKOez0
+IOM51iiC:AJH^:NBDI8J9c0
+!s105 vx_lsu_slice_tb_misaligned_neg_sv_unit
+S1
+R0
+Z24 w1773258529
+Z25 8tb/tests/vx_lsu_slice_tb_misaligned_neg.sv
+Z26 Ftb/tests/vx_lsu_slice_tb_misaligned_neg.sv
+!i122 0
+L0 7 105
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+vlsu_slice_tb_v2
+R2
+R2
+R11
+DXx4 work 26 vx_lsu_slice_tb_v2_sv_unit 0 22 SXNZ`AQdf;394d>cnhmJJ0
+R21
+R22
+DXx4 work 15 lsu_monitor_pkg 0 22 3dNVM1;cP[<z6^YZFBedd1
+R3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 _jz7_VEIi>Ci?F9n>D=A70
+IYFdIa;E2ooM8c<^BSz_bz1
+!s105 vx_lsu_slice_tb_v2_sv_unit
+S1
+R0
+Z27 w1782090240
+Z28 8tb/tests/vx_lsu_slice_tb_v2.sv
+Z29 Ftb/tests/vx_lsu_slice_tb_v2.sv
+!i122 0
+L0 7 472
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+vVX_allocator
+R2
+R3
+!i10b 1
+!s100 X6TP2[V^XB[>=EX3I@me80
+IS5aY4TVS__Hle<P3h5JK83
+S1
+R0
+Z30 w1763377195
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_allocator.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_allocator.sv
+!i122 0
+L0 17 70
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_allocator
+vVX_dp_ram
+R2
+R3
+!i10b 1
+!s100 z[JO@h`2Sf9S7:`mLS=fo2
+I]_kJ;3z:@nkFTMYkeT<563
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_dp_ram.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_dp_ram.sv
+!i122 0
+L0 67 313
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_dp_ram
+vVX_elastic_buffer
+R2
+R3
+!i10b 1
+!s100 9YTEgMEUACBCgH]IaN0`80
+I834H8z8Ok?H=h2=i41[Rb0
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_elastic_buffer.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_elastic_buffer.sv
+!i122 0
+L0 17 126
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_elastic_buffer
+YVX_execute_if
+R2
+R11
+R3
+!i10b 1
+!s100 CC`<??kg^2mL@>NA6HB1;2
+IH0gCd3^=0o^4==9WiNa:92
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/interfaces/VX_execute_if.sv
+F../../vortex-master/vortex-master/hw/rtl/interfaces/VX_execute_if.sv
+!i122 0
+Z31 L0 16 0
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_execute_if
+vVX_fifo_queue
+R2
+R3
+!i10b 1
+!s100 PIAi@E]UYGjTU[4B27LPC2
+IbX>lj;Uz1o70HPRhL6CjQ0
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_fifo_queue.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_fifo_queue.sv
+!i122 0
+L0 17 116
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_fifo_queue
+vVX_find_first
+R2
+R3
+!i10b 1
+!s100 8SSk;bmG[h;=^4V>8:VHU1
+IEhQQTj9L[aBoA`=_K;mGT3
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_find_first.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_find_first.sv
+!i122 0
+L0 17 44
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_find_first
+vVX_generic_arbiter
+R2
+R3
+!i10b 1
+!s100 [DA`T_5eD1CcM4UBf1IaW1
+I5_8P:<JRd3O<aS3lE=5FY2
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_generic_arbiter.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_generic_arbiter.sv
+!i122 0
+L0 17 85
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_generic_arbiter
+XVX_gpu_pkg
+R2
+R3
+!i10b 1
+!s100 EfhRh@aW[Pc24`@JEoD082
+I2hEO6VJfKMZ4d2GLO5SLH2
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/VX_gpu_pkg.sv
+F../../vortex-master/vortex-master/hw/rtl/VX_gpu_pkg.sv
+!i122 0
+L0 21 0
+V2hEO6VJfKMZ4d2GLO5SLH2
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_gpu_pkg
+vVX_index_buffer
+R2
+R3
+!i10b 1
+!s100 <=`QNJz[=00W=7Y2_WEYi1
+ICV^NckhN<`02>`iF34HSE1
+S1
+R0
+w1769192159
+8tb/VX_index_buffer.sv
+Ftb/VX_index_buffer.sv
+!i122 0
+L0 7 62
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_index_buffer
+YVX_lsu_mem_if
+R2
+R11
+R3
+!i10b 1
+!s100 XSe_jkgEc><aa5DMiFJ[k0
+IF:FB;no1B0?AWC7]R`b]h3
+S1
+R0
+w1765050896
+8../../vortex-master/vortex-master/hw/rtl/mem/VX_lsu_mem_if.sv
+F../../vortex-master/vortex-master/hw/rtl/mem/VX_lsu_mem_if.sv
+!i122 0
+R31
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_lsu_mem_if
+vVX_lsu_slice
+R2
+R11
+R3
+!i10b 1
+!s100 3Old>QjPmL6^ZV^0mm8333
+ILM7MQa?Zh5Z8N9be^PY@i2
+S1
+R0
+R30
+8tb/VX_lsu_slice.sv
+Ftb/VX_lsu_slice.sv
+!i122 0
+L0 16 565
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_lsu_slice
+Xvx_lsu_slice_tb_misaligned_neg_sv_unit
+R2
+R2
+R11
+R3
+VXX;S2Q=V9GzZgS;ACZV^F2
+r1
+!s85 0
+!i10b 1
+!s100 P=FFUdPR];0C@aSRln8^c3
+IXX;S2Q=V9GzZgS;ACZV^F2
+!i103 1
+S1
+R0
+R24
+R25
+R26
+R15
+R16
+R17
+R18
+R19
+!i122 0
+R20
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+Xvx_lsu_slice_tb_v2_sv_unit
+R2
+R2
+R11
+R3
+VSXNZ`AQdf;394d>cnhmJJ0
+r1
+!s85 0
+!i10b 1
+!s100 [iK9SFQfPlKZX`QKm7LK43
+ISXNZ`AQdf;394d>cnhmJJ0
+!i103 1
+S1
+R0
+R27
+R28
+R29
+R15
+R16
+R17
+R18
+R19
+!i122 0
+R20
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+vVX_lzc
+R2
+R3
+!i10b 1
+!s100 8Cme<i6WX7Jb2QP:PVkG?1
+ITk:7BXJH]oImcm0`cMzoT3
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_lzc.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_lzc.sv
+!i122 0
+L0 17 37
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_lzc
+YVX_mem_bus_if
+R2
+R11
+R3
+!i10b 1
+!s100 n22AAWl^J``kddFAXz`8`1
+IEhnPCBzKc7YajOI8:>A_P1
+S1
+R0
+w1763505407
+8../../vortex-master/vortex-master/hw/rtl/mem/VX_mem_bus_if.sv
+F../../vortex-master/vortex-master/hw/rtl/mem/VX_mem_bus_if.sv
+!i122 0
+R31
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_mem_bus_if
+vVX_mem_scheduler
+R2
+R3
+!i10b 1
+!s100 o9MUBS`:gm[5@Elf[mzTe3
+ILG11G[MX=BMbZMk0?8[790
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_mem_scheduler.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_mem_scheduler.sv
+!i122 0
+L0 17 635
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_mem_scheduler
+vVX_pipe_buffer
+R2
+R3
+!i10b 1
+!s100 nhEm53I<V>8BnLh8eQbCD3
+IJf>g70AKjVSJEND^JPn]H3
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_pipe_buffer.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_pipe_buffer.sv
+!i122 0
+L0 26 51
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_pipe_buffer
+vVX_priority_arbiter
+R2
+R3
+!i10b 1
+!s100 V=2PUDoR`PPUToTzU2H=C1
+ICIWCSTXRDc9@GC@d;JFKK3
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_priority_arbiter.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_priority_arbiter.sv
+!i122 0
+L0 17 56
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_priority_arbiter
+vVX_priority_encoder
+R2
+R3
+!i10b 1
+!s100 jjnCUOzQegezT@OXgZWzO1
+IkRk_e@9^lPiIMOONc88=^3
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_priority_encoder.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_priority_encoder.sv
+!i122 0
+L0 17 170
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_priority_encoder
+YVX_result_if
+R2
+R11
+R3
+!i10b 1
+!s100 0goG2fiYMRcTBFLbe_7:G2
+I_5h3kze2UPCC@KQeANiHM3
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/interfaces/VX_result_if.sv
+F../../vortex-master/vortex-master/hw/rtl/interfaces/VX_result_if.sv
+!i122 0
+R31
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_result_if
+vVX_stream_arb
+R2
+R3
+!i10b 1
+!s100 HN>_]mkf]b@f`?3CeI6K>0
+IKDkASa<edY_M[ahMhYE7j2
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_arb.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_arb.sv
+!i122 0
+L0 17 355
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_stream_arb
+vVX_stream_buffer
+R2
+R3
+!i10b 1
+!s100 efO;06;N1OOCm:ohFakhd0
+IiUL9H4]TWB@9mX4WbSYId3
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_buffer.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_buffer.sv
+!i122 0
+L0 26 86
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_stream_buffer
+vVX_stream_pack
+R2
+R3
+!i10b 1
+!s100 ?;HZa631Oi^Kf1CIm5l3J0
+IhI2zAdFB?:3CK@MTAKmoR1
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_pack.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_pack.sv
+!i122 0
+L0 17 87
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_stream_pack
+vVX_stream_unpack
+R2
+R3
+!i10b 1
+!s100 IZGgJa<AQ9Y2gWSNT^C`j0
+IHUV6];MiLPVk_?4:Q5_<:2
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_unpack.sv
+F../../vortex-master/vortex-master/hw/rtl/libs/VX_stream_unpack.sv
+!i122 0
+L0 17 72
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_stream_unpack
+XVX_trace_pkg
+R2
+R3
+!i10b 1
+!s100 ObTiBk;>P9T0z50[cHN780
+IP1YZH:jZk6keKYIENJmj93
+S1
+R0
+R30
+8../../vortex-master/vortex-master/hw/rtl/VX_trace_pkg.sv
+F../../vortex-master/vortex-master/hw/rtl/VX_trace_pkg.sv
+!i122 0
+L0 19 0
+VP1YZH:jZk6keKYIENJmj93
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+n@v@x_trace_pkg

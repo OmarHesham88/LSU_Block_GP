@@ -1,18 +1,21 @@
 param(
     [int]$Seeds = 20,
     [int]$NumOps = 500,
-    [int]$StartSeed = 1
+    [int]$StartSeed = 1,
+    [string]$FileList = '.\vortex_lsu_slice_stub.f',
+    [string]$WorkLib = 'work',
+    [string]$OutputDir = 'out'
 )
 
 $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $Root
 
-if (-not (Test-Path -LiteralPath '.\work')) {
-    vlib work | Out-Host
+if (-not (Test-Path -LiteralPath (".\{0}" -f $WorkLib))) {
+    vlib $WorkLib | Out-Host
 }
 
-vlog -sv -f .\vortex_lsu_slice_stub.f | Out-Host
+vlog -work $WorkLib -sv -f $FileList | Out-Host
 if ($LASTEXITCODE -ne 0) {
     throw "Compilation failed"
 }
@@ -23,10 +26,12 @@ $failCount = 0
 
 for ($i = 0; $i -lt $Seeds; $i++) {
     $seed = $StartSeed + $i
-    $logPath = Join-Path $Root ("out\seed_{0}.log" -f $seed)
+    $outDir = Join-Path $Root $OutputDir
+    New-Item -ItemType Directory -Force -Path $outDir | Out-Null
+    $logPath = Join-Path $outDir ("seed_{0}.log" -f $seed)
     $cmd = "run -all; quit -f"
 
-    $output = & vsim -c lsu_slice_tb_v2 -sv_seed $seed +SEED=$seed +NUM_OPS=$NumOps -do $cmd 2>&1
+    $output = & vsim -c ("{0}.lsu_slice_tb_v2" -f $WorkLib) -sv_seed $seed +SEED=$seed +NUM_OPS=$NumOps -do $cmd 2>&1
     $outputText = ($output | Out-String)
     $outputText | Set-Content -LiteralPath $logPath -Encoding ascii
 
@@ -53,7 +58,7 @@ for ($i = 0; $i -lt $Seeds; $i++) {
     Write-Host ("Seed {0}: {1}" -f $seed, $status)
 }
 
-$csvPath = Join-Path $Root 'out\regression_summary.csv'
+$csvPath = Join-Path (Join-Path $Root $OutputDir) 'regression_summary.csv'
 $results | Export-Csv -LiteralPath $csvPath -NoTypeInformation -Encoding ascii
 
 Write-Host "========================================="

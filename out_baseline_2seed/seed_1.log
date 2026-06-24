@@ -1,0 +1,583 @@
+Reading pref.tcl
+
+# 2021.1
+
+# vsim -c work.lsu_slice_tb_v2 -sv_seed 1 "+SEED=1" "+NUM_OPS=500" -do "run -all; quit -f" 
+# Start time: 03:27:57 on Jun 22,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.VX_gpu_pkg(fast)
+# Loading work.lsu_sequence_item_pkg(fast)
+# Loading work.lsu_scoreboard_pkg(fast)
+# Loading work.lsu_monitor_pkg(fast)
+# Loading work.vx_lsu_slice_tb_v2_sv_unit(fast)
+# Loading work.lsu_slice_tb_v2(fast)
+# Loading work.VX_lsu_slice(fast)
+# Loading work.VX_elastic_buffer(fast__3)
+# Loading work.VX_elastic_buffer(fast__4)
+# Loading work.VX_stream_arb(fast)
+# Loading work.lsu_mem_model_rand_sv_unit(fast)
+# Loading work.lsu_mem_model_rand(fast)
+# run -all
+# [75] [PASS] STORE lane=0 addr=0x100 data=0xdeadbeef op=0xa R:1 W:0
+# [215] [PASS] LOAD lane=0 addr=0x100 data=0xdeadbeef exp=0xdeadbeef op=0x2 R:2 W:0
+# [225] [PASS] STORE lane=1 addr=0x108 data=0x8001 op=0x9 R:3 W:0
+# [345] [PASS] LOAD lane=1 addr=0x108 data=0xffff8001 exp=0xffff8001 op=0x1 R:4 W:0
+# [415] [PASS] LOAD lane=1 addr=0x108 data=0x8001 exp=0x8001 op=0x5 R:5 W:0
+# [425] [PASS] STORE lane=2 addr=0x10c data=0x80 op=0x8 R:6 W:0
+# [505] [PASS] LOAD lane=2 addr=0x10c data=0xffffff80 exp=0xffffff80 op=0x0 R:7 W:0
+# [615] [PASS] LOAD lane=2 addr=0x10c data=0x80 exp=0x80 op=0x4 R:8 W:0
+# [625] [PASS] STORE lane=3 addr=0x3f8 data=0xa5a5a5a5 op=0xa R:9 W:0
+# [715] [PASS] LOAD lane=3 addr=0x3f8 data=0xa5a5a5a5 exp=0xa5a5a5a5 op=0x2 R:10 W:0
+# [725] [PASS] STORE lane=0 addr=0x3fc data=0xf00f op=0x9 R:11 W:0
+# [875] [PASS] LOAD lane=0 addr=0x3fc data=0xfffff00f exp=0xfffff00f op=0x1 R:12 W:0
+# [885] [PASS] STORE lane=1 addr=0x3ff data=0xff op=0x8 R:13 W:0
+# [995] [PASS] LOAD lane=1 addr=0x3ff data=0xff exp=0xff op=0x4 R:14 W:0
+# [1005] [PASS] STORE lane=0 addr=0x500 data=0x11110000 op=0xa R:15 W:0
+# [1085] [PASS] LOAD lane=0 addr=0x500 data=0x11110000 exp=0x11110000 op=0x2 R:16 W:0
+# [1095] [PASS] STORE lane=0 addr=0x502 data=0x8080 op=0x9 R:17 W:0
+# [1195] [PASS] LOAD lane=0 addr=0x502 data=0xffff8080 exp=0xffff8080 op=0x1 R:18 W:0
+# [1295] [PASS] LOAD lane=0 addr=0x502 data=0x8080 exp=0x8080 op=0x5 R:19 W:0
+# [1305] [PASS] STORE lane=0 addr=0x501 data=0x80 op=0x8 R:20 W:0
+# [1385] [PASS] LOAD lane=0 addr=0x501 data=0xffffff80 exp=0xffffff80 op=0x0 R:21 W:0
+# [1455] [PASS] LOAD lane=0 addr=0x501 data=0x80 exp=0x80 op=0x4 R:22 W:0
+# [1465] [PASS] STORE lane=1 addr=0x510 data=0x10100101 op=0xa R:23 W:0
+# [1565] [PASS] LOAD lane=1 addr=0x510 data=0x10100101 exp=0x10100101 op=0x2 R:24 W:0
+# [1575] [PASS] STORE lane=1 addr=0x512 data=0x8081 op=0x9 R:25 W:0
+# [1695] [PASS] LOAD lane=1 addr=0x512 data=0xffff8081 exp=0xffff8081 op=0x1 R:26 W:0
+# [1825] [PASS] LOAD lane=1 addr=0x512 data=0x8081 exp=0x8081 op=0x5 R:27 W:0
+# [1835] [PASS] STORE lane=1 addr=0x511 data=0x81 op=0x8 R:28 W:0
+# [1945] [PASS] LOAD lane=1 addr=0x511 data=0xffffff81 exp=0xffffff81 op=0x0 R:29 W:0
+# [2025] [PASS] LOAD lane=1 addr=0x511 data=0x81 exp=0x81 op=0x4 R:30 W:0
+# [2035] [PASS] STORE lane=2 addr=0x520 data=0x13130202 op=0xa R:31 W:0
+# [2185] [PASS] LOAD lane=2 addr=0x520 data=0x13130202 exp=0x13130202 op=0x2 R:32 W:0
+# [2195] [PASS] STORE lane=2 addr=0x522 data=0x8082 op=0x9 R:33 W:0
+# [2285] [PASS] LOAD lane=2 addr=0x522 data=0xffff8082 exp=0xffff8082 op=0x1 R:34 W:0
+# [2355] [PASS] LOAD lane=2 addr=0x522 data=0x8082 exp=0x8082 op=0x5 R:35 W:0
+# [2365] [PASS] STORE lane=2 addr=0x521 data=0x82 op=0x8 R:36 W:0
+# [2525] [PASS] LOAD lane=2 addr=0x521 data=0xffffff82 exp=0xffffff82 op=0x0 R:37 W:0
+# [2585] [PASS] LOAD lane=2 addr=0x521 data=0x82 exp=0x82 op=0x4 R:38 W:0
+# [2595] [PASS] STORE lane=3 addr=0x530 data=0x12120303 op=0xa R:39 W:0
+# [2705] [PASS] LOAD lane=3 addr=0x530 data=0x12120303 exp=0x12120303 op=0x2 R:40 W:0
+# [2715] [PASS] STORE lane=3 addr=0x532 data=0x8083 op=0x9 R:41 W:0
+# [2865] [PASS] LOAD lane=3 addr=0x532 data=0xffff8083 exp=0xffff8083 op=0x1 R:42 W:0
+# [3005] [PASS] LOAD lane=3 addr=0x532 data=0x8083 exp=0x8083 op=0x5 R:43 W:0
+# [3015] [PASS] STORE lane=3 addr=0x531 data=0x83 op=0x8 R:44 W:0
+# [3155] [PASS] LOAD lane=3 addr=0x531 data=0xffffff83 exp=0xffffff83 op=0x0 R:45 W:0
+# [3255] [PASS] LOAD lane=3 addr=0x531 data=0x83 exp=0x83 op=0x4 R:46 W:0
+# [3265] [PASS] STORE lane=0 addr=0x700 data=0xa5000000 op=0xa R:47 W:0
+# [3455] [PASS] LOAD lane=0 addr=0x700 data=0xa5000000 exp=0xa5000000 op=0x2 R:48 W:0
+# [3465] [PASS] STORE lane=0 addr=0x700 data=0x5a000000 op=0xa R:49 W:0
+# [3625] [PASS] LOAD lane=0 addr=0x700 data=0x5a000000 exp=0x5a000000 op=0x2 R:50 W:0
+# [3635] [PASS] STORE lane=1 addr=0x708 data=0xa5000001 op=0xa R:51 W:0
+# [3825] [PASS] LOAD lane=1 addr=0x708 data=0xa5000001 exp=0xa5000001 op=0x2 R:52 W:0
+# [3835] [PASS] STORE lane=1 addr=0x708 data=0x5a000001 op=0xa R:53 W:0
+# [4015] [PASS] LOAD lane=1 addr=0x708 data=0x5a000001 exp=0x5a000001 op=0x2 R:54 W:0
+# [4025] [PASS] STORE lane=2 addr=0x710 data=0xa5000002 op=0xa R:55 W:0
+# [4185] [PASS] LOAD lane=2 addr=0x710 data=0xa5000002 exp=0xa5000002 op=0x2 R:56 W:0
+# [4195] [PASS] STORE lane=2 addr=0x710 data=0x5a000002 op=0xa R:57 W:0
+# [4395] [PASS] LOAD lane=2 addr=0x710 data=0x5a000002 exp=0x5a000002 op=0x2 R:58 W:0
+# [4405] [PASS] STORE lane=3 addr=0x718 data=0xa5000003 op=0xa R:59 W:0
+# [4575] [PASS] LOAD lane=3 addr=0x718 data=0xa5000003 exp=0xa5000003 op=0x2 R:60 W:0
+# [4585] [PASS] STORE lane=3 addr=0x718 data=0x5a000003 op=0xa R:61 W:0
+# [4845] [PASS] LOAD lane=3 addr=0x718 data=0x5a000003 exp=0x5a000003 op=0x2 R:62 W:0
+# [5005] [PASS] LOAD lane=3 addr=0xba4 data=0x0 exp=0x0 op=0x2 R:63 W:0
+# [5015] [PASS] STORE lane=1 addr=0xc04 data=0xedf8a23e op=0xa R:64 W:0
+# [5085] [PASS] LOAD lane=1 addr=0x34c data=0x0 exp=0x0 op=0x2 R:65 W:0
+# [5235] [PASS] LOAD lane=2 addr=0x2e2 data=0x0 exp=0x0 op=0x0 R:66 W:0
+# [5305] [PASS] LOAD lane=2 addr=0x60e data=0x0 exp=0x0 op=0x1 R:67 W:0
+# [5315] [PASS] STORE lane=0 addr=0x218 data=0x8d291031 op=0x9 R:68 W:0
+# [5325] [PASS] STORE lane=2 addr=0xcb data=0xdebab7b4 op=0x8 R:69 W:0
+# [5475] [PASS] LOAD lane=2 addr=0x8f4 data=0x0 exp=0x0 op=0x2 R:70 W:0
+# [5545] [PASS] LOAD lane=1 addr=0x256 data=0x0 exp=0x0 op=0x5 R:71 W:0
+# [5655] [PASS] LOAD lane=1 addr=0x15e data=0x0 exp=0x0 op=0x0 R:72 W:0
+# [5665] [PASS] STORE lane=0 addr=0x7 data=0xa50ac332 op=0x8 R:73 W:0
+# [5785] [PASS] LOAD lane=1 addr=0x5a4 data=0x0 exp=0x0 op=0x1 R:74 W:0
+# [5795] [PASS] STORE lane=1 addr=0xbd0 data=0xf804259e op=0xa R:75 W:0
+# [5805] [PASS] STORE lane=1 addr=0x1d0 data=0x2cdfe3e1 op=0xa R:76 W:0
+# [6005] [PASS] LOAD lane=3 addr=0x38a data=0x0 exp=0x0 op=0x5 R:77 W:0
+# [6065] [PASS] LOAD lane=1 addr=0x6a data=0x0 exp=0x0 op=0x5 R:78 W:0
+# [6075] [PASS] STORE lane=2 addr=0xf14 data=0xa4dbd963 op=0xa R:79 W:0
+# [6195] [PASS] LOAD lane=3 addr=0x778 data=0x0 exp=0x0 op=0x1 R:80 W:0
+# [6265] [PASS] LOAD lane=1 addr=0x3ae data=0x0 exp=0x0 op=0x1 R:81 W:0
+# [6405] [PASS] LOAD lane=1 addr=0x9a0 data=0x0 exp=0x0 op=0x2 R:82 W:0
+# [6515] [PASS] LOAD lane=1 addr=0x82 data=0x0 exp=0x0 op=0x0 R:83 W:0
+# [6605] [PASS] LOAD lane=3 addr=0x3fc data=0xf exp=0xf op=0x0 R:84 W:0
+# [6705] [PASS] LOAD lane=0 addr=0x270 data=0x0 exp=0x0 op=0x0 R:85 W:0
+# [6715] [PASS] STORE lane=0 addr=0xae data=0xab8fba27 op=0x9 R:86 W:0
+# [6845] [PASS] LOAD lane=3 addr=0x758 data=0x0 exp=0x0 op=0x5 R:87 W:0
+# [6955] [PASS] LOAD lane=2 addr=0xa80 data=0x0 exp=0x0 op=0x2 R:88 W:0
+# [6965] [PASS] STORE lane=2 addr=0x38 data=0x5d7f83e op=0x8 R:89 W:0
+# [7035] [PASS] LOAD lane=1 addr=0x444 data=0x0 exp=0x0 op=0x1 R:90 W:0
+# [7165] [PASS] STORE lane=2 addr=0x7a8 data=0xa6cb60f4 op=0x9 R:91 W:0
+# [7175] [PASS] STORE lane=2 addr=0x293 data=0x78aa146a op=0x8 R:92 W:0
+# [7195] [PASS] STORE lane=2 addr=0x312 data=0xf882de3 op=0x9 R:93 W:0
+# [7355] [PASS] LOAD lane=0 addr=0x5c data=0x0 exp=0x0 op=0x4 R:94 W:0
+# [7415] [PASS] LOAD lane=1 addr=0x5e8 data=0x0 exp=0x0 op=0x1 R:95 W:0
+# [7505] [PASS] LOAD lane=3 addr=0x13a data=0x0 exp=0x0 op=0x5 R:96 W:0
+# [7635] [PASS] LOAD lane=1 addr=0x698 data=0x0 exp=0x0 op=0x1 R:97 W:0
+# [7725] [PASS] LOAD lane=3 addr=0x71a data=0x5a00 exp=0x5a00 op=0x1 R:98 W:0
+# [7735] [PASS] STORE lane=3 addr=0x440 data=0x2700aa1 op=0x9 R:99 W:0
+# [7745] [PASS] STORE lane=1 addr=0x53a data=0x7c1dbd0e op=0x9 R:100 W:0
+# [7855] [PASS] LOAD lane=0 addr=0xc6c data=0x0 exp=0x0 op=0x2 R:101 W:0
+# [7865] [PASS] STORE lane=3 addr=0x180 data=0x3a8cc8e9 op=0xa R:102 W:0
+# [8115] [PASS] LOAD lane=0 addr=0x34f data=0x0 exp=0x0 op=0x4 R:103 W:0
+# [8125] [PASS] STORE lane=1 addr=0xe10 data=0xf8df794 op=0xa R:104 W:0
+# [8225] [PASS] LOAD lane=3 addr=0x674 data=0x0 exp=0x0 op=0x5 R:105 W:0
+# [8235] [PASS] STORE lane=0 addr=0x2f0 data=0x374316bc op=0xa R:106 W:0
+# [8245] [PASS] STORE lane=2 addr=0xc98 data=0xcf9e09fc op=0xa R:107 W:0
+# [8385] [PASS] LOAD lane=1 addr=0x1b4 data=0x0 exp=0x0 op=0x5 R:108 W:0
+# [8475] [PASS] LOAD lane=2 addr=0x40a data=0x0 exp=0x0 op=0x5 R:109 W:0
+# [8485] [PASS] STORE lane=0 addr=0x4f6 data=0x465408c1 op=0x9 R:110 W:0
+# [8495] [PASS] STORE lane=3 addr=0x688 data=0x8899e2f6 op=0xa R:111 W:0
+# [8605] [PASS] LOAD lane=2 addr=0x184 data=0x0 exp=0x0 op=0x2 R:112 W:0
+# [8725] [PASS] LOAD lane=2 addr=0x216 data=0x0 exp=0x0 op=0x4 R:113 W:0
+# [8865] [PASS] LOAD lane=2 addr=0x554 data=0x0 exp=0x0 op=0x5 R:114 W:0
+# [8955] [PASS] LOAD lane=3 addr=0x146 data=0x0 exp=0x0 op=0x1 R:115 W:0
+# [9055] [PASS] LOAD lane=0 addr=0x240 data=0x0 exp=0x0 op=0x5 R:116 W:0
+# [9215] [PASS] LOAD lane=1 addr=0x29e data=0x0 exp=0x0 op=0x0 R:117 W:0
+# [9275] [PASS] LOAD lane=0 addr=0x345 data=0x0 exp=0x0 op=0x0 R:118 W:0
+# [9285] [PASS] STORE lane=2 addr=0xfb0 data=0xa3fa95b4 op=0xa R:119 W:0
+# [9295] [PASS] STORE lane=2 addr=0x182 data=0x4ee74b92 op=0x8 R:120 W:0
+# [9305] [PASS] STORE lane=0 addr=0x1c6 data=0x7aa7d9e7 op=0x8 R:121 W:0
+# [9465] [PASS] LOAD lane=3 addr=0x3cc data=0x0 exp=0x0 op=0x2 R:122 W:0
+# [9475] [PASS] STORE lane=1 addr=0x25d data=0xfa857a81 op=0x8 R:123 W:0
+# [9485] [PASS] STORE lane=1 addr=0x404 data=0x955d8b5a op=0x9 R:124 W:0
+# [9495] [PASS] STORE lane=1 addr=0xc94 data=0x1b512db7 op=0xa R:125 W:0
+# [9505] [PASS] STORE lane=1 addr=0xf9c data=0xf673af9c op=0xa R:126 W:0
+# [9515] [PASS] STORE lane=1 addr=0x26a data=0x6bf07273 op=0x8 R:127 W:0
+# [9665] [PASS] LOAD lane=0 addr=0x24 data=0x0 exp=0x0 op=0x1 R:128 W:0
+# [9745] [PASS] LOAD lane=1 addr=0x16e data=0x0 exp=0x0 op=0x0 R:129 W:0
+# [9755] [PASS] STORE lane=1 addr=0xea8 data=0x5c484f74 op=0xa R:130 W:0
+# [9765] [PASS] STORE lane=0 addr=0x215 data=0x1c105c15 op=0x8 R:131 W:0
+# [9775] [PASS] STORE lane=3 addr=0x46c data=0x2f46d997 op=0xa R:132 W:0
+# [9915] [PASS] LOAD lane=0 addr=0x32a data=0x0 exp=0x0 op=0x1 R:133 W:0
+# [9995] [PASS] LOAD lane=1 addr=0x231 data=0x0 exp=0x0 op=0x4 R:134 W:0
+# [10135] [PASS] LOAD lane=3 addr=0x38c data=0x0 exp=0x0 op=0x4 R:135 W:0
+# [10145] [PASS] STORE lane=1 addr=0xfdc data=0x2ea61bd5 op=0xa R:136 W:0
+# [10205] [PASS] LOAD lane=2 addr=0x64 data=0x0 exp=0x0 op=0x4 R:137 W:0
+# [10215] [PASS] STORE lane=3 addr=0xb18 data=0xd6f9841 op=0xa R:138 W:0
+# [10315] [PASS] LOAD lane=1 addr=0x26c data=0x0 exp=0x0 op=0x5 R:139 W:0
+# [10325] [PASS] STORE lane=3 addr=0x720 data=0xebf06fc7 op=0xa R:140 W:0
+# [10335] [PASS] STORE lane=2 addr=0x18 data=0x8fe41f6b op=0x9 R:141 W:0
+# [10485] [PASS] LOAD lane=3 addr=0xae data=0x27 exp=0x27 op=0x4 R:142 W:0
+# [10495] [PASS] STORE lane=0 addr=0x5fc data=0xfb8144c5 op=0x9 R:143 W:0
+# [10565] [PASS] LOAD lane=2 addr=0x4b8 data=0x0 exp=0x0 op=0x2 R:144 W:0
+# [10575] [PASS] STORE lane=3 addr=0x580 data=0x6d34d05c op=0xa R:145 W:0
+# [10715] [PASS] LOAD lane=0 addr=0x436 data=0x0 exp=0x0 op=0x5 R:146 W:0
+# [10795] [PASS] LOAD lane=2 addr=0x480 data=0x0 exp=0x0 op=0x5 R:147 W:0
+# [10805] [PASS] STORE lane=2 addr=0x244 data=0x2eace654 op=0xa R:148 W:0
+# [10925] [PASS] LOAD lane=0 addr=0xc8 data=0xb4000000 exp=0xb4000000 op=0x2 R:149 W:0
+# [11035] [PASS] LOAD lane=2 addr=0xe24 data=0x0 exp=0x0 op=0x2 R:150 W:0
+# [11125] [PASS] LOAD lane=0 addr=0x1ad data=0x0 exp=0x0 op=0x0 R:151 W:0
+# [11195] [PASS] LOAD lane=0 addr=0x53 data=0x0 exp=0x0 op=0x4 R:152 W:0
+# [11275] [PASS] LOAD lane=2 addr=0x79e data=0x0 exp=0x0 op=0x5 R:153 W:0
+# [11335] [PASS] LOAD lane=1 addr=0x9c data=0x0 exp=0x0 op=0x4 R:154 W:0
+# [11455] [PASS] LOAD lane=0 addr=0x3b4 data=0x0 exp=0x0 op=0x4 R:155 W:0
+# [11545] [PASS] STORE lane=3 addr=0x29c data=0xd6a34173 op=0x8 R:156 W:0
+# [11555] [PASS] STORE lane=0 addr=0x304 data=0xcc8eba63 op=0xa R:157 W:0
+# [11645] [PASS] LOAD lane=0 addr=0x4ec data=0x0 exp=0x0 op=0x2 R:158 W:0
+# [11655] [PASS] STORE lane=2 addr=0x2b8 data=0x8d2327d0 op=0x8 R:159 W:0
+# [11665] [PASS] STORE lane=2 addr=0x1f7 data=0xe4ddef21 op=0x8 R:160 W:0
+# [11675] [PASS] STORE lane=2 addr=0xfe data=0x29256657 op=0x8 R:161 W:0
+# [11805] [PASS] LOAD lane=2 addr=0x758 data=0x0 exp=0x0 op=0x2 R:162 W:0
+# [11815] [PASS] STORE lane=2 addr=0x235 data=0x7252aff op=0x8 R:163 W:0
+# [11885] [PASS] LOAD lane=3 addr=0x3a2 data=0x0 exp=0x0 op=0x5 R:164 W:0
+# [11965] [PASS] LOAD lane=2 addr=0x1b8 data=0x0 exp=0x0 op=0x5 R:165 W:0
+# [11975] [PASS] STORE lane=1 addr=0x21a data=0x311e975e op=0x9 R:166 W:0
+# [11985] [PASS] STORE lane=3 addr=0xfe8 data=0x95e72650 op=0xa R:167 W:0
+# [12065] [PASS] LOAD lane=0 addr=0x1ce data=0x0 exp=0x0 op=0x5 R:168 W:0
+# [12165] [PASS] LOAD lane=3 addr=0xc20 data=0x0 exp=0x0 op=0x2 R:169 W:0
+# [12225] [PASS] LOAD lane=3 addr=0x1cc data=0x0 exp=0x0 op=0x0 R:170 W:0
+# [12235] [PASS] STORE lane=0 addr=0x26e data=0x472470e op=0x8 R:171 W:0
+# [12365] [PASS] LOAD lane=2 addr=0x120 data=0x0 exp=0x0 op=0x2 R:172 W:0
+# [12375] [PASS] STORE lane=0 addr=0x7be data=0x563450d7 op=0x9 R:173 W:0
+# [12485] [PASS] LOAD lane=1 addr=0x26c data=0x0 exp=0x0 op=0x5 R:174 W:0
+# [12565] [PASS] LOAD lane=3 addr=0x278 data=0x0 exp=0x0 op=0x4 R:175 W:0
+# [12645] [PASS] LOAD lane=2 addr=0x27b data=0x0 exp=0x0 op=0x4 R:176 W:0
+# [12655] [PASS] STORE lane=2 addr=0x206 data=0x4d1539d3 op=0x8 R:177 W:0
+# [12765] [PASS] LOAD lane=0 addr=0x3a2 data=0x0 exp=0x0 op=0x1 R:178 W:0
+# [12775] [PASS] STORE lane=3 addr=0x3e data=0x41410b45 op=0x9 R:179 W:0
+# [12785] [PASS] STORE lane=2 addr=0x180 data=0xe6668941 op=0xa R:180 W:0
+# [12885] [PASS] LOAD lane=3 addr=0x14e data=0x0 exp=0x0 op=0x0 R:181 W:0
+# [12895] [PASS] STORE lane=0 addr=0x590 data=0x5e2df4b0 op=0xa R:182 W:0
+# [12965] [PASS] LOAD lane=2 addr=0x148 data=0x0 exp=0x0 op=0x0 R:183 W:0
+# [13055] [PASS] LOAD lane=3 addr=0xeac data=0x0 exp=0x0 op=0x2 R:184 W:0
+# [13065] [PASS] STORE lane=1 addr=0x85c data=0x4a20fa4d op=0xa R:185 W:0
+# [13075] [PASS] STORE lane=1 addr=0x3ec data=0x79a49b49 op=0x8 R:186 W:0
+# [13225] [PASS] LOAD lane=1 addr=0x348 data=0x0 exp=0x0 op=0x1 R:187 W:0
+# [13235] [PASS] STORE lane=0 addr=0x5e8 data=0x3894fbc1 op=0xa R:188 W:0
+# [13245] [PASS] STORE lane=1 addr=0x844 data=0x78f28848 op=0xa R:189 W:0
+# [13255] [PASS] STORE lane=1 addr=0x5b0 data=0x708178b1 op=0xa R:190 W:0
+# [13355] [PASS] LOAD lane=0 addr=0x778 data=0x0 exp=0x0 op=0x5 R:191 W:0
+# [13365] [PASS] STORE lane=1 addr=0x10d data=0x577dd019 op=0x8 R:192 W:0
+# [13465] [PASS] LOAD lane=3 addr=0x716 data=0x0 exp=0x0 op=0x1 R:193 W:0
+# [13575] [PASS] LOAD lane=3 addr=0x50c data=0x0 exp=0x0 op=0x2 R:194 W:0
+# [13585] [PASS] STORE lane=2 addr=0x9e data=0x7d4fd9a7 op=0x8 R:195 W:0
+# [13595] [PASS] STORE lane=2 addr=0x389 data=0x83804af5 op=0x8 R:196 W:0
+# [13685] [PASS] LOAD lane=2 addr=0x778 data=0x0 exp=0x0 op=0x1 R:197 W:0
+# [13695] [PASS] STORE lane=0 addr=0x71 data=0x59c2de8d op=0x8 R:198 W:0
+# [13705] [PASS] STORE lane=3 addr=0xc14 data=0x646e2f8f op=0xa R:199 W:0
+# [13825] [PASS] LOAD lane=0 addr=0x17a data=0x0 exp=0x0 op=0x1 R:200 W:0
+# [13835] [PASS] STORE lane=1 addr=0x40a data=0x5920aef5 op=0x9 R:201 W:0
+# [13995] [PASS] LOAD lane=3 addr=0x6f4 data=0x0 exp=0x0 op=0x5 R:202 W:0
+# [14005] [PASS] STORE lane=1 addr=0xa64 data=0x54cdc8ee op=0xa R:203 W:0
+# [14015] [PASS] STORE lane=2 addr=0x1a0 data=0x51fd8317 op=0x8 R:204 W:0
+# [14025] [PASS] STORE lane=3 addr=0x296 data=0x9dff8dc1 op=0x9 R:205 W:0
+# [14035] [PASS] STORE lane=1 addr=0x283 data=0x99cf5a55 op=0x8 R:206 W:0
+# [14175] [PASS] LOAD lane=0 addr=0x15c data=0x0 exp=0x0 op=0x2 R:207 W:0
+# [14245] [PASS] LOAD lane=0 addr=0x124 data=0x0 exp=0x0 op=0x4 R:208 W:0
+# [14255] [PASS] STORE lane=0 addr=0x3eb data=0x1150c84b op=0x8 R:209 W:0
+# [14405] [PASS] LOAD lane=2 addr=0x36e data=0x0 exp=0x0 op=0x0 R:210 W:0
+# [14555] [PASS] LOAD lane=0 addr=0x362 data=0x0 exp=0x0 op=0x0 R:211 W:0
+# [14625] [PASS] STORE lane=0 addr=0x756 data=0xb0c94405 op=0x9 R:212 W:0
+# [14695] [PASS] LOAD lane=0 addr=0x186 data=0x0 exp=0x0 op=0x1 R:213 W:0
+# [14765] [PASS] LOAD lane=1 addr=0x208 data=0x0 exp=0x0 op=0x2 R:214 W:0
+# [14775] [PASS] STORE lane=3 addr=0x16a data=0x53b465db op=0x9 R:215 W:0
+# [14785] [PASS] STORE lane=1 addr=0xcc data=0x203a87b1 op=0x8 R:216 W:0
+# [14905] [PASS] LOAD lane=3 addr=0x1ca data=0x0 exp=0x0 op=0x1 R:217 W:0
+# [14915] [PASS] STORE lane=3 addr=0xe4 data=0x525aa03 op=0xa R:218 W:0
+# [15055] [PASS] LOAD lane=2 addr=0xed8 data=0x0 exp=0x0 op=0x2 R:219 W:0
+# [15125] [PASS] LOAD lane=0 addr=0x2ba data=0x0 exp=0x0 op=0x5 R:220 W:0
+# [15255] [PASS] LOAD lane=1 addr=0x5fe data=0x0 exp=0x0 op=0x1 R:221 W:0
+# [15265] [PASS] STORE lane=3 addr=0x506 data=0xed6efd2c op=0x9 R:222 W:0
+# [15275] [PASS] STORE lane=2 addr=0x4e8 data=0x5165153f op=0x9 R:223 W:0
+# [15415] [PASS] LOAD lane=2 addr=0x38c data=0x0 exp=0x0 op=0x1 R:224 W:0
+# [15425] [PASS] STORE lane=1 addr=0xc2 data=0xf11080c3 op=0x8 R:225 W:0
+# [15535] [PASS] LOAD lane=2 addr=0x4a4 data=0x0 exp=0x0 op=0x1 R:226 W:0
+# [15615] [PASS] LOAD lane=0 addr=0xa98 data=0x0 exp=0x0 op=0x2 R:227 W:0
+# [15735] [PASS] LOAD lane=3 addr=0x6f8 data=0x0 exp=0x0 op=0x5 R:228 W:0
+# [15885] [PASS] LOAD lane=0 addr=0x6c0 data=0x0 exp=0x0 op=0x2 R:229 W:0
+# [15895] [PASS] STORE lane=2 addr=0xb4c data=0xe62b08f5 op=0xa R:230 W:0
+# [15995] [PASS] LOAD lane=2 addr=0x43e data=0x0 exp=0x0 op=0x1 R:231 W:0
+# [16005] [PASS] STORE lane=2 addr=0x398 data=0xb952a167 op=0xa R:232 W:0
+# [16115] [PASS] LOAD lane=3 addr=0xf2 data=0x0 exp=0x0 op=0x4 R:233 W:0
+# [16405] [PASS] LOAD lane=2 addr=0x4ce data=0x0 exp=0x0 op=0x1 R:234 W:0
+# [16415] [PASS] STORE lane=3 addr=0x1a8 data=0xd1afd263 op=0x9 R:235 W:0
+# [16535] [PASS] LOAD lane=2 addr=0x25b data=0x0 exp=0x0 op=0x0 R:236 W:0
+# [16545] [PASS] STORE lane=1 addr=0x198 data=0xb8efe6de op=0x9 R:237 W:0
+# [16555] [PASS] STORE lane=3 addr=0x144 data=0x3bc7557b op=0xa R:238 W:0
+# [16715] [PASS] LOAD lane=2 addr=0x38b data=0x0 exp=0x0 op=0x4 R:239 W:0
+# [16725] [PASS] STORE lane=2 addr=0x638 data=0x617e0887 op=0x9 R:240 W:0
+# [16735] [PASS] STORE lane=3 addr=0xc1c data=0xe1530e9b op=0xa R:241 W:0
+# [16745] [PASS] STORE lane=0 addr=0x133 data=0xc741e8b4 op=0x8 R:242 W:0
+# [16765] [PASS] STORE lane=3 addr=0xfa data=0xd025c683 op=0x9 R:243 W:0
+# [16835] [PASS] LOAD lane=1 addr=0x430 data=0x0 exp=0x0 op=0x1 R:244 W:0
+# [16845] [PASS] STORE lane=0 addr=0x91c data=0x2cedd4bb op=0xa R:245 W:0
+# [16925] [PASS] LOAD lane=2 addr=0x14 data=0x0 exp=0x0 op=0x1 R:246 W:0
+# [16935] [PASS] STORE lane=1 addr=0xf30 data=0x81add804 op=0xa R:247 W:0
+# [16945] [PASS] STORE lane=1 addr=0x73c data=0x82a48d8d op=0x9 R:248 W:0
+# [17055] [PASS] LOAD lane=3 addr=0x88 data=0x0 exp=0x0 op=0x2 R:249 W:0
+# [17155] [PASS] LOAD lane=3 addr=0x342 data=0x0 exp=0x0 op=0x1 R:250 W:0
+# [17165] [PASS] STORE lane=2 addr=0x42a data=0x63af012a op=0x9 R:251 W:0
+# [17315] [PASS] LOAD lane=3 addr=0x37b data=0x0 exp=0x0 op=0x0 R:252 W:0
+# [17325] [PASS] STORE lane=0 addr=0x7d8 data=0x945d55c2 op=0xa R:253 W:0
+# [17405] [PASS] LOAD lane=1 addr=0x2e4 data=0x0 exp=0x0 op=0x0 R:254 W:0
+# [17415] [PASS] STORE lane=0 addr=0x560 data=0x88f5c5c4 op=0x9 R:255 W:0
+# [17675] [PASS] LOAD lane=3 addr=0xa3 data=0x0 exp=0x0 op=0x0 R:256 W:0
+# [17785] [PASS] LOAD lane=3 addr=0x484 data=0x0 exp=0x0 op=0x2 R:257 W:0
+# [17795] [PASS] STORE lane=2 addr=0x768 data=0x78456e2 op=0x9 R:258 W:0
+# [17805] [PASS] STORE lane=3 addr=0x352 data=0x8d3891e4 op=0x9 R:259 W:0
+# [17935] [PASS] LOAD lane=3 addr=0xfdc data=0x2ea61bd5 exp=0x2ea61bd5 op=0x2 R:260 W:0
+# [17995] [PASS] LOAD lane=1 addr=0x3ff data=0xff exp=0xff op=0x4 R:261 W:0
+# [18125] [PASS] LOAD lane=1 addr=0x71e data=0x0 exp=0x0 op=0x5 R:262 W:0
+# [18135] [PASS] STORE lane=1 addr=0xe78 data=0xcd6a003e op=0xa R:263 W:0
+# [18145] [PASS] STORE lane=2 addr=0x1da data=0x71bf7f3a op=0x9 R:264 W:0
+# [18155] [PASS] STORE lane=2 addr=0x84 data=0x7eeafb2c op=0xa R:265 W:0
+# [18165] [PASS] STORE lane=0 addr=0xa20 data=0x9522ceab op=0xa R:266 W:0
+# [18175] [PASS] STORE lane=3 addr=0x3c data=0x49c753a7 op=0xa R:267 W:0
+# [18335] [PASS] LOAD lane=1 addr=0x27 data=0x0 exp=0x0 op=0x4 R:268 W:0
+# [18345] [PASS] STORE lane=1 addr=0x490 data=0x15ba83ab op=0x9 R:269 W:0
+# [18355] [PASS] STORE lane=1 addr=0x122 data=0x3ed9e3d6 op=0x9 R:270 W:0
+# [18515] [PASS] LOAD lane=2 addr=0x226 data=0x0 exp=0x0 op=0x5 R:271 W:0
+# [18525] [PASS] STORE lane=0 addr=0x3ec data=0xd2775793 op=0x9 R:272 W:0
+# [18535] [PASS] STORE lane=3 addr=0xdb0 data=0xedec3769 op=0xa R:273 W:0
+# [18695] [PASS] LOAD lane=1 addr=0x65c data=0x0 exp=0x0 op=0x1 R:274 W:0
+# [18705] [PASS] STORE lane=0 addr=0x400 data=0x6e42b889 op=0x9 R:275 W:0
+# [18795] [PASS] LOAD lane=1 addr=0x50c data=0x0 exp=0x0 op=0x5 R:276 W:0
+# [18805] [PASS] STORE lane=2 addr=0x2d0 data=0x67d87d73 op=0x8 R:277 W:0
+# [18935] [PASS] LOAD lane=0 addr=0x1bc data=0x0 exp=0x0 op=0x1 R:278 W:0
+# [18945] [PASS] STORE lane=0 addr=0xd8 data=0x91779d00 op=0x9 R:279 W:0
+# [18955] [PASS] STORE lane=3 addr=0xec4 data=0x2daf1ed2 op=0xa R:280 W:0
+# [18965] [PASS] STORE lane=3 addr=0xe data=0x5b3200dd op=0x8 R:281 W:0
+# [19065] [PASS] LOAD lane=1 addr=0x2fc data=0x0 exp=0x0 op=0x0 R:282 W:0
+# [19075] [PASS] STORE lane=3 addr=0x220 data=0x1caf85a4 op=0xa R:283 W:0
+# [19175] [PASS] LOAD lane=2 addr=0x148 data=0x0 exp=0x0 op=0x0 R:284 W:0
+# [19325] [PASS] STORE lane=2 addr=0x59c data=0xbc37931e op=0x9 R:285 W:0
+# [19335] [PASS] STORE lane=2 addr=0x16a data=0x8d8b6443 op=0x8 R:286 W:0
+# [19405] [PASS] LOAD lane=1 addr=0x6c8 data=0x0 exp=0x0 op=0x2 R:287 W:0
+# [19415] [PASS] STORE lane=1 addr=0xe0 data=0x94f00ec1 op=0xa R:288 W:0
+# [19555] [PASS] LOAD lane=0 addr=0x776 data=0x0 exp=0x0 op=0x5 R:289 W:0
+# [19635] [PASS] LOAD lane=0 addr=0xb10 data=0x0 exp=0x0 op=0x2 R:290 W:0
+# [19645] [PASS] STORE lane=2 addr=0x50c data=0x4fad2445 op=0xa R:291 W:0
+# [19805] [PASS] LOAD lane=3 addr=0x4b data=0x0 exp=0x0 op=0x4 R:292 W:0
+# [19815] [PASS] STORE lane=0 addr=0x494 data=0x14a208f7 op=0xa R:293 W:0
+# [19925] [PASS] LOAD lane=3 addr=0x522 data=0x8082 exp=0x8082 op=0x5 R:294 W:0
+# [19935] [PASS] STORE lane=1 addr=0x34 data=0x580e720a op=0x9 R:295 W:0
+# [20085] [PASS] LOAD lane=3 addr=0x2f8 data=0x0 exp=0x0 op=0x4 R:296 W:0
+# [20165] [PASS] LOAD lane=2 addr=0xc14 data=0x646e2f8f exp=0x646e2f8f op=0x2 R:297 W:0
+# [20235] [PASS] LOAD lane=0 addr=0x128 data=0x0 exp=0x0 op=0x4 R:298 W:0
+# [20335] [PASS] LOAD lane=0 addr=0x496 data=0x14a2 exp=0x14a2 op=0x1 R:299 W:0
+# [20345] [PASS] STORE lane=1 addr=0xeb4 data=0xec1d848f op=0xa R:300 W:0
+# [20355] [PASS] STORE lane=0 addr=0x212 data=0x14d3acfd op=0x9 R:301 W:0
+# [20515] [PASS] LOAD lane=0 addr=0x2ac data=0x0 exp=0x0 op=0x4 R:302 W:0
+# [20625] [PASS] LOAD lane=1 addr=0xa50 data=0x0 exp=0x0 op=0x2 R:303 W:0
+# [20695] [PASS] LOAD lane=0 addr=0x25a data=0x0 exp=0x0 op=0x4 R:304 W:0
+# [20705] [PASS] STORE lane=2 addr=0x1a data=0x4615bb6c op=0x9 R:305 W:0
+# [20805] [PASS] LOAD lane=2 addr=0xc60 data=0x0 exp=0x0 op=0x2 R:306 W:0
+# [20925] [PASS] LOAD lane=3 addr=0x200 data=0x0 exp=0x0 op=0x0 R:307 W:0
+# [21075] [PASS] LOAD lane=1 addr=0x3b6 data=0x0 exp=0x0 op=0x5 R:308 W:0
+# [21085] [PASS] STORE lane=0 addr=0x1f9 data=0xa6f9c253 op=0x8 R:309 W:0
+# [21095] [PASS] STORE lane=0 addr=0xb8c data=0x55e4073b op=0xa R:310 W:0
+# [21165] [PASS] LOAD lane=1 addr=0x44a data=0x0 exp=0x0 op=0x5 R:311 W:0
+# [21265] [PASS] LOAD lane=2 addr=0x35f data=0x0 exp=0x0 op=0x4 R:312 W:0
+# [21275] [PASS] STORE lane=3 addr=0x17a data=0x8639469b op=0x8 R:313 W:0
+# [21285] [PASS] STORE lane=3 addr=0x6e data=0xf238991 op=0x8 R:314 W:0
+# [21425] [PASS] LOAD lane=1 addr=0x6be data=0x0 exp=0x0 op=0x5 R:315 W:0
+# [21435] [PASS] STORE lane=2 addr=0x1ba data=0xd04e4ee6 op=0x9 R:316 W:0
+# [21445] [PASS] STORE lane=2 addr=0xfe0 data=0x8dcda0a1 op=0xa R:317 W:0
+# [21455] [PASS] STORE lane=0 addr=0x340 data=0x71a77c11 op=0x9 R:318 W:0
+# [21465] [PASS] STORE lane=2 addr=0xfb0 data=0x2f0a7362 op=0xa R:319 W:0
+# [21475] [PASS] STORE lane=1 addr=0x742 data=0x72a36d7f op=0x9 R:320 W:0
+# [21595] [PASS] LOAD lane=0 addr=0xa70 data=0x0 exp=0x0 op=0x2 R:321 W:0
+# [21605] [PASS] STORE lane=2 addr=0x3d0 data=0x26e69ee7 op=0x8 R:322 W:0
+# [21615] [PASS] STORE lane=0 addr=0x5f6 data=0x71b49fbc op=0x9 R:323 W:0
+# [21775] [PASS] STORE lane=0 addr=0xfc4 data=0xa1363bbd op=0xa R:324 W:0
+# [21785] [PASS] STORE lane=3 addr=0x508 data=0x2876fb1e op=0xa R:325 W:0
+# [21795] [PASS] STORE lane=1 addr=0x38b data=0x6f4519b7 op=0x8 R:326 W:0
+# [21805] [PASS] STORE lane=0 addr=0xbb data=0xb6a3c4e3 op=0x8 R:327 W:0
+# [21815] [PASS] STORE lane=3 addr=0x5c data=0xc46d810d op=0x8 R:328 W:0
+# [21955] [PASS] LOAD lane=2 addr=0x96 data=0x0 exp=0x0 op=0x0 R:329 W:0
+# [21965] [PASS] STORE lane=2 addr=0x2fa data=0x9e1a48e8 op=0x8 R:330 W:0
+# [21975] [PASS] STORE lane=0 addr=0x36e data=0x7fbeb464 op=0x9 R:331 W:0
+# [21985] [PASS] STORE lane=2 addr=0x510 data=0x613630cf op=0xa R:332 W:0
+# [22105] [PASS] LOAD lane=1 addr=0x122 data=0xe3d6 exp=0xe3d6 op=0x5 R:333 W:0
+# [22175] [PASS] LOAD lane=1 addr=0x6c4 data=0x0 exp=0x0 op=0x2 R:334 W:0
+# [22265] [PASS] STORE lane=3 addr=0x6b8 data=0xc82dff73 op=0x9 R:335 W:0
+# [22275] [PASS] STORE lane=1 addr=0xe1c data=0x9dd0d6f9 op=0xa R:336 W:0
+# [22295] [PASS] STORE lane=2 addr=0x59 data=0xff75164b op=0x8 R:337 W:0
+# [22425] [PASS] LOAD lane=1 addr=0x290 data=0x0 exp=0x0 op=0x0 R:338 W:0
+# [22485] [PASS] LOAD lane=0 addr=0x33b data=0x0 exp=0x0 op=0x4 R:339 W:0
+# [22555] [PASS] LOAD lane=2 addr=0x181 data=0x89 exp=0x89 op=0x4 R:340 W:0
+# [22625] [PASS] LOAD lane=0 addr=0x206 data=0xd3 exp=0xd3 op=0x4 R:341 W:0
+# [22685] [PASS] LOAD lane=1 addr=0x2d2 data=0x0 exp=0x0 op=0x5 R:342 W:0
+# [22765] [PASS] LOAD lane=1 addr=0x730 data=0x0 exp=0x0 op=0x1 R:343 W:0
+# [22775] [PASS] STORE lane=2 addr=0x8f0 data=0xe95a7e3e op=0xa R:344 W:0
+# [22885] [PASS] LOAD lane=2 addr=0x72c data=0x0 exp=0x0 op=0x2 R:345 W:0
+# [22985] [PASS] LOAD lane=0 addr=0xb60 data=0x0 exp=0x0 op=0x2 R:346 W:0
+# [22995] [PASS] STORE lane=0 addr=0x554 data=0xad1ca5b op=0x9 R:347 W:0
+# [23095] [PASS] LOAD lane=0 addr=0xb4 data=0x0 exp=0x0 op=0x0 R:348 W:0
+# [23205] [PASS] LOAD lane=0 addr=0x34b data=0x0 exp=0x0 op=0x0 R:349 W:0
+# [23215] [PASS] STORE lane=3 addr=0x506 data=0xb11bf83 op=0x9 R:350 W:0
+# [23225] [PASS] STORE lane=0 addr=0xc data=0x19e1ff7d op=0xa R:351 W:0
+# [23305] [PASS] LOAD lane=3 addr=0x8d8 data=0x0 exp=0x0 op=0x2 R:352 W:0
+# [23315] [PASS] STORE lane=0 addr=0xa4 data=0xea3269c3 op=0x8 R:353 W:0
+# [23325] [PASS] STORE lane=3 addr=0x10a data=0x401ebfd6 op=0x8 R:354 W:0
+# [23465] [PASS] LOAD lane=1 addr=0x44 data=0x0 exp=0x0 op=0x1 R:355 W:0
+# [23475] [PASS] STORE lane=3 addr=0x257 data=0x4440a133 op=0x8 R:356 W:0
+# [23485] [PASS] STORE lane=3 addr=0x504 data=0xd74d1fa9 op=0x9 R:357 W:0
+# [23635] [PASS] LOAD lane=1 addr=0x1c0 data=0x0 exp=0x0 op=0x2 R:358 W:0
+# [23645] [PASS] STORE lane=2 addr=0x34e data=0x25223675 op=0x9 R:359 W:0
+# [23655] [PASS] STORE lane=3 addr=0x20e data=0xe3d9d8d8 op=0x9 R:360 W:0
+# [23755] [PASS] LOAD lane=0 addr=0xff0 data=0x0 exp=0x0 op=0x2 R:361 W:0
+# [23855] [PASS] LOAD lane=0 addr=0x16d data=0x0 exp=0x0 op=0x4 R:362 W:0
+# [23945] [PASS] LOAD lane=0 addr=0x38 data=0x3e exp=0x3e op=0x0 R:363 W:0
+# [23955] [PASS] STORE lane=0 addr=0xe0 data=0x4b27b306 op=0x8 R:364 W:0
+# [24035] [PASS] LOAD lane=2 addr=0x230 data=0x0 exp=0x0 op=0x1 R:365 W:0
+# [24045] [PASS] STORE lane=3 addr=0x18c data=0x36646aa5 op=0x9 R:366 W:0
+# [24165] [PASS] LOAD lane=1 addr=0x1ea data=0x0 exp=0x0 op=0x0 R:367 W:0
+# [24235] [PASS] LOAD lane=0 addr=0x6d2 data=0x0 exp=0x0 op=0x1 R:368 W:0
+# [24355] [PASS] LOAD lane=3 addr=0xc24 data=0x0 exp=0x0 op=0x2 R:369 W:0
+# [24465] [PASS] LOAD lane=0 addr=0x243 data=0x0 exp=0x0 op=0x4 R:370 W:0
+# [24555] [PASS] LOAD lane=1 addr=0x39a data=0xb952 exp=0xb952 op=0x5 R:371 W:0
+# [24695] [PASS] LOAD lane=1 addr=0x1d9 data=0x0 exp=0x0 op=0x0 R:372 W:0
+# [24705] [PASS] STORE lane=2 addr=0x3b4 data=0x2431a9cc op=0xa R:373 W:0
+# [24855] [PASS] LOAD lane=3 addr=0x3e3 data=0x0 exp=0x0 op=0x4 R:374 W:0
+# [24865] [PASS] STORE lane=2 addr=0x187 data=0xdb0aff16 op=0x8 R:375 W:0
+# [24875] [PASS] STORE lane=3 addr=0x2a data=0x8170b8c0 op=0x8 R:376 W:0
+# [25015] [PASS] LOAD lane=2 addr=0x56c data=0x0 exp=0x0 op=0x1 R:377 W:0
+# [25025] [PASS] STORE lane=2 addr=0xa8 data=0x243254a1 op=0xa R:378 W:0
+# [25035] [PASS] STORE lane=0 addr=0xcc0 data=0x43ff9eb0 op=0xa R:379 W:0
+# [25045] [PASS] STORE lane=3 addr=0x6c data=0xa091cbbb op=0x9 R:380 W:0
+# [25155] [PASS] LOAD lane=1 addr=0x3b4 data=0xa9cc exp=0xa9cc op=0x5 R:381 W:0
+# [25165] [PASS] STORE lane=0 addr=0xf90 data=0x86112f1f op=0xa R:382 W:0
+# [25175] [PASS] STORE lane=3 addr=0xac8 data=0xcb74a627 op=0xa R:383 W:0
+# [25275] [PASS] LOAD lane=1 addr=0x52 data=0x0 exp=0x0 op=0x1 R:384 W:0
+# [25285] [PASS] STORE lane=1 addr=0xfa data=0x41c95d3b op=0x9 R:385 W:0
+# [25385] [PASS] LOAD lane=2 addr=0x5d4 data=0x0 exp=0x0 op=0x1 R:386 W:0
+# [25395] [PASS] STORE lane=0 addr=0x24 data=0xbac9b44f op=0x9 R:387 W:0
+# [25405] [PASS] STORE lane=2 addr=0xea8 data=0xf485ff2f op=0xa R:388 W:0
+# [25555] [PASS] LOAD lane=3 addr=0x4dc data=0x0 exp=0x0 op=0x5 R:389 W:0
+# [25565] [PASS] STORE lane=2 addr=0x68e data=0xc1aebc74 op=0x9 R:390 W:0
+# [25655] [PASS] LOAD lane=3 addr=0x764 data=0x0 exp=0x0 op=0x5 R:391 W:0
+# [25785] [PASS] LOAD lane=2 addr=0x101 data=0xffffffbe exp=0xffffffbe op=0x0 R:392 W:0
+# [25935] [PASS] LOAD lane=1 addr=0x62 data=0x0 exp=0x0 op=0x4 R:393 W:0
+# [26015] [PASS] LOAD lane=3 addr=0x61c data=0x0 exp=0x0 op=0x2 R:394 W:0
+# [26155] [PASS] LOAD lane=1 addr=0x3ec data=0x5793 exp=0x5793 op=0x1 R:395 W:0
+# [26225] [PASS] STORE lane=1 addr=0x3fa data=0x19311a38 op=0x9 R:396 W:0
+# [26305] [PASS] LOAD lane=2 addr=0x1aa data=0x0 exp=0x0 op=0x4 R:397 W:0
+# [26315] [PASS] STORE lane=2 addr=0xc9 data=0x1fa4f4d5 op=0x8 R:398 W:0
+# [26325] [PASS] STORE lane=2 addr=0x780 data=0x2b151e98 op=0x9 R:399 W:0
+# [26495] [PASS] LOAD lane=2 addr=0x564 data=0x0 exp=0x0 op=0x5 R:400 W:0
+# [26505] [PASS] STORE lane=0 addr=0x2d7 data=0x5545c39e op=0x8 R:401 W:0
+# [26655] [PASS] LOAD lane=2 addr=0xa3 data=0x0 exp=0x0 op=0x0 R:402 W:0
+# [26775] [PASS] LOAD lane=1 addr=0xb8 data=0xe3000000 exp=0xe3000000 op=0x2 R:403 W:0
+# [26885] [PASS] LOAD lane=2 addr=0x22 data=0x0 exp=0x0 op=0x1 R:404 W:0
+# [27045] [PASS] LOAD lane=3 addr=0x294 data=0x8dc10000 exp=0x8dc10000 op=0x2 R:405 W:0
+# [27125] [PASS] LOAD lane=2 addr=0xa8 data=0xffffffa1 exp=0xffffffa1 op=0x0 R:406 W:0
+# [27135] [PASS] STORE lane=1 addr=0xb64 data=0x6e0bd1d2 op=0xa R:407 W:0
+# [27145] [PASS] STORE lane=2 addr=0x75c data=0x46946b35 op=0xa R:408 W:0
+# [27155] [PASS] STORE lane=2 addr=0x2c1 data=0x66a7305e op=0x8 R:409 W:0
+# [27165] [PASS] STORE lane=0 addr=0x1f2 data=0x4744266a op=0x8 R:410 W:0
+# [27175] [PASS] STORE lane=3 addr=0x5d4 data=0x10912b4b op=0x9 R:411 W:0
+# [27305] [PASS] LOAD lane=0 addr=0x166 data=0x0 exp=0x0 op=0x4 R:412 W:0
+# [27395] [PASS] LOAD lane=0 addr=0x4d0 data=0x0 exp=0x0 op=0x5 R:413 W:0
+# [27495] [PASS] LOAD lane=1 addr=0x39a data=0x52 exp=0x52 op=0x0 R:414 W:0
+# [27635] [PASS] LOAD lane=0 addr=0x474 data=0x0 exp=0x0 op=0x1 R:415 W:0
+# [27785] [PASS] LOAD lane=1 addr=0x1dc data=0x0 exp=0x0 op=0x2 R:416 W:0
+# [27795] [PASS] STORE lane=2 addr=0x189 data=0x6de252f2 op=0x8 R:417 W:0
+# [27805] [PASS] STORE lane=0 addr=0x2e9 data=0x591d139d op=0x8 R:418 W:0
+# [27825] [PASS] STORE lane=3 addr=0x6e6 data=0x5398f1a1 op=0x9 R:419 W:0
+# [27985] [PASS] LOAD lane=0 addr=0x5d8 data=0x0 exp=0x0 op=0x5 R:420 W:0
+# [27995] [PASS] STORE lane=3 addr=0xa34 data=0x21da9265 op=0xa R:421 W:0
+# [28055] [PASS] LOAD lane=1 addr=0xc5 data=0x0 exp=0x0 op=0x0 R:422 W:0
+# [28065] [PASS] STORE lane=1 addr=0x1ea data=0x8027ad13 op=0x9 R:423 W:0
+# [28225] [PASS] LOAD lane=0 addr=0x3a0 data=0x0 exp=0x0 op=0x0 R:424 W:0
+# [28365] [PASS] LOAD lane=0 addr=0xae8 data=0x0 exp=0x0 op=0x2 R:425 W:0
+# [28475] [PASS] LOAD lane=3 addr=0x234 data=0x0 exp=0x0 op=0x4 R:426 W:0
+# [28565] [PASS] LOAD lane=0 addr=0x228 data=0x0 exp=0x0 op=0x0 R:427 W:0
+# [28655] [PASS] LOAD lane=0 addr=0x3e2 data=0x0 exp=0x0 op=0x4 R:428 W:0
+# [28715] [PASS] LOAD lane=0 addr=0x210 data=0x0 exp=0x0 op=0x4 R:429 W:0
+# [28845] [PASS] LOAD lane=3 addr=0x1aa data=0x0 exp=0x0 op=0x0 R:430 W:0
+# [28855] [PASS] STORE lane=1 addr=0xb4 data=0xe1d7ffd6 op=0x9 R:431 W:0
+# [28975] [PASS] LOAD lane=0 addr=0xcf0 data=0x0 exp=0x0 op=0x2 R:432 W:0
+# [28985] [PASS] STORE lane=2 addr=0xdf4 data=0xf1ea3c21 op=0xa R:433 W:0
+# [29095] [PASS] LOAD lane=3 addr=0x216 data=0x0 exp=0x0 op=0x1 R:434 W:0
+# [29105] [PASS] STORE lane=0 addr=0x53c data=0x71245892 op=0x9 R:435 W:0
+# [29225] [PASS] LOAD lane=0 addr=0x16c data=0x0 exp=0x0 op=0x0 R:436 W:0
+# [29315] [PASS] LOAD lane=0 addr=0x238 data=0x0 exp=0x0 op=0x2 R:437 W:0
+# [29425] [PASS] LOAD lane=0 addr=0x18 data=0x1f6b exp=0x1f6b op=0x5 R:438 W:0
+# [29435] [PASS] STORE lane=0 addr=0xe60 data=0x114c3eaa op=0xa R:439 W:0
+# [29445] [PASS] STORE lane=3 addr=0x42c data=0xc8e2ef77 op=0x9 R:440 W:0
+# [29455] [PASS] STORE lane=0 addr=0x2e3 data=0xdc9a5d5c op=0x8 R:441 W:0
+# [29555] [PASS] LOAD lane=2 addr=0x2fa data=0xe8 exp=0xe8 op=0x5 R:442 W:0
+# [29705] [PASS] LOAD lane=0 addr=0xa6 data=0x0 exp=0x0 op=0x5 R:443 W:0
+# [29815] [PASS] LOAD lane=2 addr=0x47c data=0x0 exp=0x0 op=0x1 R:444 W:0
+# [29955] [PASS] LOAD lane=1 addr=0x173 data=0x0 exp=0x0 op=0x4 R:445 W:0
+# [30055] [PASS] LOAD lane=3 addr=0x14e data=0x0 exp=0x0 op=0x1 R:446 W:0
+# [30195] [PASS] LOAD lane=2 addr=0x12c data=0x0 exp=0x0 op=0x0 R:447 W:0
+# [30345] [PASS] LOAD lane=2 addr=0xa0 data=0x0 exp=0x0 op=0x5 R:448 W:0
+# [30425] [PASS] LOAD lane=2 addr=0x1dc data=0x0 exp=0x0 op=0x4 R:449 W:0
+# [30435] [PASS] STORE lane=0 addr=0xee0 data=0x22618edc op=0xa R:450 W:0
+# [30545] [PASS] LOAD lane=3 addr=0xdcc data=0x0 exp=0x0 op=0x2 R:451 W:0
+# [30555] [PASS] STORE lane=0 addr=0x75c data=0x23a47852 op=0x9 R:452 W:0
+# [30565] [PASS] STORE lane=0 addr=0x574 data=0x90339ac2 op=0x9 R:453 W:0
+# [30575] [PASS] STORE lane=2 addr=0x46a data=0xbc5f4c8f op=0x9 R:454 W:0
+# [30695] [PASS] LOAD lane=0 addr=0x194 data=0x0 exp=0x0 op=0x1 R:455 W:0
+# [30765] [PASS] LOAD lane=0 addr=0x2fa data=0xe8 exp=0xe8 op=0x4 R:456 W:0
+# [30885] [PASS] LOAD lane=3 addr=0x6e2 data=0x0 exp=0x0 op=0x1 R:457 W:0
+# [30945] [PASS] LOAD lane=1 addr=0xe3c data=0x0 exp=0x0 op=0x2 R:458 W:0
+# [30955] [PASS] STORE lane=1 addr=0xc4 data=0xb39431ce op=0x9 R:459 W:0
+# [31115] [PASS] LOAD lane=2 addr=0xd98 data=0x0 exp=0x0 op=0x2 R:460 W:0
+# [31245] [PASS] LOAD lane=2 addr=0x80 data=0x0 exp=0x0 op=0x5 R:461 W:0
+# [31305] [PASS] LOAD lane=0 addr=0x171 data=0x0 exp=0x0 op=0x0 R:462 W:0
+# [31315] [PASS] STORE lane=0 addr=0x89c data=0x68712637 op=0xa R:463 W:0
+# [31395] [PASS] LOAD lane=1 addr=0xc9 data=0xffffffd5 exp=0xffffffd5 op=0x0 R:464 W:0
+# [31545] [PASS] LOAD lane=1 addr=0x273 data=0x0 exp=0x0 op=0x0 R:465 W:0
+# [31555] [PASS] STORE lane=0 addr=0x440 data=0x1e95060c op=0x9 R:466 W:0
+# [31715] [PASS] LOAD lane=3 addr=0x4da data=0x0 exp=0x0 op=0x5 R:467 W:0
+# [31725] [PASS] STORE lane=3 addr=0x4ec data=0xdc531807 op=0x9 R:468 W:0
+# [31735] [PASS] STORE lane=1 addr=0xdc data=0xff1830e5 op=0xa R:469 W:0
+# [31755] [PASS] STORE lane=3 addr=0x175 data=0x46a65a83 op=0x8 R:470 W:0
+# [31775] [PASS] STORE lane=2 addr=0x324 data=0xefb3e0dc op=0x9 R:471 W:0
+# [31785] [PASS] STORE lane=2 addr=0x132 data=0x98045e4a op=0x9 R:472 W:0
+# [31925] [PASS] LOAD lane=3 addr=0x290 data=0x0 exp=0x0 op=0x4 R:473 W:0
+# [31935] [PASS] STORE lane=2 addr=0xe1c data=0xf33fdcf2 op=0xa R:474 W:0
+# [31945] [PASS] STORE lane=3 addr=0x6a6 data=0xc5ddc41e op=0x9 R:475 W:0
+# [31955] [PASS] STORE lane=1 addr=0x2bc data=0x981dbf4 op=0xa R:476 W:0
+# [31965] [PASS] STORE lane=0 addr=0x2c0 data=0xd89f57ce op=0x9 R:477 W:0
+# [32085] [PASS] STORE lane=3 addr=0x934 data=0xe8e4ed34 op=0xa R:478 W:0
+# [32175] [PASS] LOAD lane=0 addr=0x58c data=0x0 exp=0x0 op=0x5 R:479 W:0
+# [32325] [PASS] LOAD lane=0 addr=0x115 data=0x0 exp=0x0 op=0x4 R:480 W:0
+# [32475] [PASS] LOAD lane=2 addr=0x378 data=0x0 exp=0x0 op=0x0 R:481 W:0
+# [32615] [PASS] LOAD lane=2 addr=0xbf8 data=0x0 exp=0x0 op=0x2 R:482 W:0
+# [32775] [PASS] LOAD lane=1 addr=0x2e3 data=0x5c exp=0x5c op=0x4 R:483 W:0
+# [32895] [PASS] LOAD lane=0 addr=0x9 data=0x0 exp=0x0 op=0x0 R:484 W:0
+# [33015] [PASS] LOAD lane=2 addr=0xb40 data=0x0 exp=0x0 op=0x2 R:485 W:0
+# [33145] [PASS] LOAD lane=1 addr=0xc38 data=0x0 exp=0x0 op=0x2 R:486 W:0
+# [33255] [PASS] LOAD lane=0 addr=0x3ff data=0xff exp=0xff op=0x4 R:487 W:0
+# [33265] [PASS] STORE lane=3 addr=0x1ad data=0x14480a82 op=0x8 R:488 W:0
+# [33275] [PASS] STORE lane=2 addr=0x5c0 data=0x49e8d3c4 op=0x9 R:489 W:0
+# [33395] [PASS] LOAD lane=2 addr=0x472 data=0x0 exp=0x0 op=0x5 R:490 W:0
+# [33545] [PASS] LOAD lane=0 addr=0x3ac data=0x0 exp=0x0 op=0x1 R:491 W:0
+# [33625] [PASS] LOAD lane=3 addr=0x140 data=0x0 exp=0x0 op=0x4 R:492 W:0
+# [33695] [PASS] LOAD lane=3 addr=0x51e data=0x0 exp=0x0 op=0x1 R:493 W:0
+# [33825] [PASS] LOAD lane=2 addr=0x306 data=0x8e exp=0x8e op=0x4 R:494 W:0
+# [33925] [PASS] LOAD lane=3 addr=0x37a data=0x0 exp=0x0 op=0x1 R:495 W:0
+# [34075] [PASS] LOAD lane=3 addr=0x218 data=0x31 exp=0x31 op=0x0 R:496 W:0
+# [34085] [PASS] STORE lane=1 addr=0x5c4 data=0x7d11b2e5 op=0x9 R:497 W:0
+# [34095] [PASS] STORE lane=1 addr=0x764 data=0xa8751da6 op=0x9 R:498 W:0
+# [34195] [PASS] LOAD lane=2 addr=0x60 data=0x0 exp=0x0 op=0x0 R:499 W:0
+# [34205] [PASS] STORE lane=1 addr=0x234 data=0x3f24ddf8 op=0x8 R:500 W:0
+# [34215] [PASS] STORE lane=0 addr=0x355 data=0xe7e03bb8 op=0x8 R:501 W:0
+# [34225] [PASS] STORE lane=2 addr=0xc6 data=0x80c26029 op=0x9 R:502 W:0
+# [34235] [PASS] STORE lane=1 addr=0x5b data=0x9e694a35 op=0x8 R:503 W:0
+# [34255] [PASS] STORE lane=3 addr=0xff0 data=0xea4d16ce op=0xa R:504 W:0
+# [34265] [PASS] STORE lane=3 addr=0x434 data=0x5081b9c9 op=0x9 R:505 W:0
+# [34285] [PASS] STORE lane=3 addr=0x30b data=0x87669ca9 op=0x8 R:506 W:0
+# [34305] [PASS] STORE lane=2 addr=0xc5c data=0xb7aa03b7 op=0xa R:507 W:0
+# [34315] [PASS] STORE lane=1 addr=0x586 data=0x5e3dd1db op=0x9 R:508 W:0
+# [34335] [PASS] STORE lane=3 addr=0x6a data=0xaa0eb6f8 op=0x8 R:509 W:0
+# [34485] [PASS] LOAD lane=3 addr=0x612 data=0x0 exp=0x0 op=0x1 R:510 W:0
+# [34495] [PASS] STORE lane=3 addr=0x9d8 data=0x86b02efd op=0xa R:511 W:0
+# [34555] [PASS] LOAD lane=3 addr=0x74 data=0x0 exp=0x0 op=0x1 R:512 W:0
+# [34665] [PASS] LOAD lane=1 addr=0x92 data=0x0 exp=0x0 op=0x4 R:513 W:0
+# [34675] [PASS] STORE lane=1 addr=0x65c data=0xd609138 op=0x9 R:514 W:0
+# [34795] [PASS] LOAD lane=0 addr=0x126 data=0x0 exp=0x0 op=0x5 R:515 W:0
+# [34885] [PASS] LOAD lane=0 addr=0xc0 data=0x0 exp=0x0 op=0x1 R:516 W:0
+# [34895] [PASS] STORE lane=0 addr=0x3ef data=0x134c7d18 op=0x8 R:517 W:0
+# [34985] [PASS] LOAD lane=1 addr=0x5de data=0x0 exp=0x0 op=0x1 R:518 W:0
+# [35075] [PASS] LOAD lane=3 addr=0x1be data=0x0 exp=0x0 op=0x5 R:519 W:0
+# [35085] [PASS] STORE lane=2 addr=0xb94 data=0xe83afd91 op=0xa R:520 W:0
+# [35095] [PASS] STORE lane=1 addr=0x990 data=0xd3185446 op=0xa R:521 W:0
+# [35235] [PASS] LOAD lane=2 addr=0xe70 data=0x0 exp=0x0 op=0x2 R:522 W:0
+# [35245] [PASS] STORE lane=1 addr=0x5e4 data=0xc9d342ad op=0xa R:523 W:0
+# [35355] [PASS] STORE lane=0 addr=0x66 data=0xf1780cc2 op=0x8 R:524 W:0
+# [35485] [PASS] LOAD lane=2 addr=0x102 data=0xad exp=0xad op=0x4 R:525 W:0
+# [35645] [PASS] LOAD lane=0 addr=0x72a data=0x0 exp=0x0 op=0x1 R:526 W:0
+# [35845] [PASS] LOAD lane=3 addr=0x14a data=0x0 exp=0x0 op=0x0 R:527 W:0
+# [35995] [PASS] LOAD lane=3 addr=0xe58 data=0x0 exp=0x0 op=0x2 R:528 W:0
+# [36005] [PASS] STORE lane=3 addr=0xf38 data=0xc39ef900 op=0xa R:529 W:0
+# [36015] [PASS] STORE lane=0 addr=0x464 data=0xf72eee6b op=0x9 R:530 W:0
+# [36025] [PASS] STORE lane=0 addr=0x970 data=0x9a2e85b2 op=0xa R:531 W:0
+# [36175] [PASS] LOAD lane=3 addr=0x4ba data=0x0 exp=0x0 op=0x1 R:532 W:0
+# [36185] [PASS] STORE lane=2 addr=0x140 data=0x8e3737f4 op=0x9 R:533 W:0
+# [36345] [PASS] LOAD lane=1 addr=0x5e8 data=0xfbc1 exp=0xfbc1 op=0x5 R:534 W:0
+# [36465] [PASS] LOAD lane=3 addr=0x9c0 data=0x0 exp=0x0 op=0x2 R:535 W:0
+# [36615] [PASS] LOAD lane=2 addr=0x388 data=0xb700f500 exp=0xb700f500 op=0x2 R:536 W:0
+# [36695] [PASS] LOAD lane=2 addr=0x139 data=0x0 exp=0x0 op=0x0 R:537 W:0
+# [36705] [PASS] STORE lane=3 addr=0x6a4 data=0xb8a3f38b op=0xa R:538 W:0
+# [36715] [PASS] STORE lane=2 addr=0x258 data=0xec99634e op=0x9 R:539 W:0
+# [36725] [PASS] STORE lane=2 addr=0xa88 data=0xcc223789 op=0xa R:540 W:0
+# SCOREBOARD total=540 pass=540 fail=0
+# COVERAGE issue_cov=91.67%
+# LSU_V2 PASSED
+# ** Note: $finish    : tb/tests/vx_lsu_slice_tb_v2.sv(474)
+#    Time: 37225 ns  Iteration: 1  Instance: /lsu_slice_tb_v2
+# End time: 03:28:11 on Jun 22,2026, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0
+

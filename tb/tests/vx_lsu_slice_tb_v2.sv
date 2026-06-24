@@ -147,7 +147,24 @@ module lsu_slice_tb_v2;
         }
 
         cx_op_lane : cross cp_op, cp_lane;
-        cx_store_op: cross cp_is_store, cp_op;
+        cx_store_op: cross cp_is_store, cp_op {
+            ignore_bins load_flag_with_store_ops =
+                binsof(cp_is_store.load) &&
+                (binsof(cp_op.b_sw) || binsof(cp_op.b_sb) || binsof(cp_op.b_sh)
+            `ifdef XLEN_64
+                 || binsof(cp_op.b_sd)
+            `endif
+                );
+
+            ignore_bins store_flag_with_non_store_ops =
+                binsof(cp_is_store.store) &&
+                (binsof(cp_op.b_lw) || binsof(cp_op.b_lb) || binsof(cp_op.b_lbu) ||
+                 binsof(cp_op.b_lh) || binsof(cp_op.b_lhu) || binsof(cp_op.b_fence)
+            `ifdef XLEN_64
+                 || binsof(cp_op.b_ld) || binsof(cp_op.b_lwu)
+            `endif
+                );
+        }
     endgroup
 
     cg_issue issue_cov = new();
@@ -471,7 +488,8 @@ module lsu_slice_tb_v2;
             $fatal(1, "LSU_V2 FAILED coverage below target: %0.2f%%", issue_cov.get_inst_coverage());
 
         $display("LSU_V2 PASSED");
-        $finish;
+        if (!$test$plusargs("NO_FINISH"))
+            $finish;
     end
 
 endmodule

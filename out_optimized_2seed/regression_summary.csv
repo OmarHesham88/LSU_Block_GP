@@ -1,0 +1,3 @@
+"Seed","Status","Scoreboard","Coverage","Log"
+"1","PASS","# SCOREBOARD total=540 pass=540 fail=0","# COVERAGE issue_cov=91.67%","D:\Studies\[ECE491s] Graudation Project 2\Codes\LSU\Verification_v2\out_optimized_2seed\seed_1.log"
+"2","PASS","# SCOREBOARD total=530 pass=530 fail=0","# COVERAGE issue_cov=91.67%","D:\Studies\[ECE491s] Graudation Project 2\Codes\LSU\Verification_v2\out_optimized_2seed\seed_2.log"
